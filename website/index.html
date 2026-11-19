@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wayline — The AI copilot that calls for help</title>
+  <meta name="description" content="Wayline One adds AI lane centering, adaptive cruise and infrared driver monitoring to the car you already own — with Guardian, a safety layer that detects a crash or an unresponsive driver and gets help on the way. Concept preview.">
+  <meta name="theme-color" content="#05070b">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://neofrees.github.io/wayline/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Wayline">
+  <meta property="og:title" content="Wayline — The AI copilot that calls for help">
+  <meta property="og:description" content="Lane centering, adaptive cruise and IR driver monitoring for the car you already own — plus Guardian, an AI safety layer that gets help on the way. Concept preview.">
+  <meta property="og:url" content="https://neofrees.github.io/wayline/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wayline — The AI copilot that calls for help">
+  <meta name="twitter:description" content="Keeps you in your lane — and calls for help when you can't. Concept preview, open source.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container nav">
+      <a class="brand" href="./" aria-label="Wayline — home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="wl-g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3cf2b0"/><stop offset="1" stop-color="#5aa8ff"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#0b111a"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/><path d="M14 19 L23.5 46 L32 28 L40.5 46 L50 19" fill="none" stroke="url(#wl-g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Wayline</span>
+      </a>
+      <nav class="nav-links" id="nav-menu" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#guardian">Guardian</a>
+        <a href="#safety">Safety</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#open-source">Open source</a>
+        <a href="business.html">Business</a>
+        <a class="btn btn-sm nav-cta-mobile" href="https://github.com/NeoFrees/wayline">Follow the build on GitHub</a>
+      </nav>
+      <a class="btn btn-sm btn-ghost nav-cta" href="https://github.com/NeoFrees/wayline">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        Follow the build
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="pill"><span class="pill-dot" aria-hidden="true"></span>Concept preview — in development</p>
+          <h1 id="hero-title">Keeps you in your lane. <span class="grad-text">Calls for help when you can't.</span></h1>
+          <p class="lead">Wayline One adds AI lane centering, adaptive cruise and infrared driver monitoring to the car you already own — with <strong>Guardian</strong>, a safety layer that recognizes a crash or an unresponsive driver and gets help on the way.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#guardian">See Guardian in action
+              <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/NeoFrees/wayline">Read the code</a>
+          </div>
+          <ul class="hero-facts">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Hands-off, eyes-on assistance</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>~15-minute install</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Open source (MIT)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hud-chips" aria-hidden="true">
+        <span class="hud-chip"><span class="dot"></span>Lane centering · active</span>
+        <span class="hud-chip is-dm"><span class="dot"></span>Driver attentive</span>
+        <span class="hud-chip is-guardian"><span class="dot"></span>Guardian armed</span>
+      </div>
+      <div class="hud-speed" aria-hidden="true">
+        <span class="v" id="hud-speed">62</span><span class="u">mph</span>
+        <span class="meta">LEAD <b id="hud-lead">36</b> m · OFFSET <b id="hud-offset">+0.04</b> m</span>
+      </div>
+    </section>
+
+    <!-- ============ FEATURE TRIO ============ -->
+    <section class="section" id="product" aria-labelledby="product-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Wayline One + Wayline OS</p>
+          <h2 id="product-title">Three jobs, done relentlessly well.</h2>
+          <p class="lead">Most cars sold in the last several years already have the cameras and actuators for lane-keep and adaptive cruise. Wayline gives that hardware a far better brain — and adds a safety net the car never had.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card feature reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 21 10 3"/><path d="M17 21 14 3"/><path d="M12 19v-2M12 13v-2M12 7V5"/></svg></div>
+            <p class="kicker">Driving</p>
+            <h3>Stays centered</h3>
+            <p>Smooth, confident lane centering and adaptive cruise that keeps a safe gap — on highways and long commutes.</p>
+            <ul class="ticks">
+              <li>Lane Centering &amp; Lane Departure Warning</li>
+              <li>Adaptive Cruise Control</li>
+              <li>Driver-initiated Lane Change Assist</li>
+              <li>Over-the-air updates</li>
+            </ul>
+          </article>
+
+          <article class="card feature reveal" data-delay="1" data-tone="info">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <p class="kicker">Attention</p>
+            <h3>Watches the driver</h3>
+            <p>An infrared camera checks that your eyes are on the road — day or night, even with sunglasses — and escalates if they aren't.</p>
+            <ul class="ticks">
+              <li>IR driver monitoring</li>
+              <li>Hands-off, eyes-on — you always supervise</li>
+              <li>Escalating visual and audible alerts</li>
+              <li>Emergency Stop Assist if you stop responding</li>
+            </ul>
+          </article>
+
+          <article class="card feature reveal" data-delay="2" data-tone="amber">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.3 8.3-8 9-4.7-.7-8-4.5-8-9V6z"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg></div>
+            <p class="kicker">Guardian</p>
+            <h3>Calls for help</h3>
+            <p>If there's a crash or you become unresponsive, Guardian checks in by voice — and if you can't answer, it alerts the people who need to know.</p>
+            <ul class="ticks">
+              <li>Crash detection with a high-g IMU</li>
+              <li>Voice check-in with a 10-second window</li>
+              <li>Emergency contacts get location + summary</li>
+              <li>24/7 response center on Plus</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ LANE ASSIST DEEP-DIVE ============ -->
+    <section class="section" id="lane-assist" aria-labelledby="lane-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Lane assist, end to end</p>
+          <h2 id="lane-title">From pixels to steering — with hard limits in between.</h2>
+          <p class="lead">Every frame, Wayline OS turns camera pixels into a lane model, plans a path, and asks for exactly as much steering as it needs — never more than an independent safety layer allows.</p>
+          <ol class="pipeline">
+            <li>
+              <h3>Perception <code>perception/lanes</code></h3>
+              <p>Lane markings are detected and fitted to a curve, giving lateral offset, heading and road curvature — with a confidence score.</p>
+            </li>
+            <li>
+              <h3>Planning <code>controls.py</code></h3>
+              <p>A smooth path back to lane center, with curvature feed-forward so the car leans into bends instead of reacting late.</p>
+            </li>
+            <li>
+              <h3>Control <code>control/lateral</code></h3>
+              <p>The path becomes a steering-torque request, tuned for comfort and consistency at every speed.</p>
+            </li>
+            <li>
+              <h3>Safety limits <code>control/safety</code></h3>
+              <p>Torque and its rate of change are clamped. Touch the brake or turn the wheel and you're in control — instantly, every time.</p>
+            </li>
+          </ol>
+        </div>
+
+        <figure class="viz panel reveal" data-delay="1">
+          <div class="panel-top"><span>perception · bird's-eye view</span><span class="live"><i></i>live fit</span></div>
+          <canvas id="lane-fit-canvas" role="img" aria-label="Animated bird's-eye view: noisy lane-marking detections, fitted lane curves and the planned path back to lane center."></canvas>
+          <div class="readouts">
+            <div><span>Lateral offset</span><b id="ro-offset">+0.00 m</b></div>
+            <div><span>Heading</span><b id="ro-heading">0.0°</b></div>
+            <div><span>Curve radius</span><b id="ro-radius">—</b></div>
+            <div><span>Fit RMS</span><b id="ro-rms">0.00 m</b></div>
+          </div>
+          <div class="gauge">
+            <div class="gauge-label"><span>Left</span><span>Lane center</span><span>Right</span></div>
+            <div class="gauge-track"><div class="gauge-marker" id="offset-marker"></div></div>
+          </div>
+          <div class="torque">
+            <span>Steer request</span>
+            <div class="torque-track"><div class="torque-fill" id="torque-fill"></div></div>
+            <b id="ro-torque">0%</b>
+          </div>
+          <figcaption>Each line is modeled as <code>y = ax² + bx + c</code> and re-fitted every frame from noisy detections; outliers are rejected. Illustrative visualization.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ GUARDIAN SCENARIO PLAYER ============ -->
+    <section class="section section-guardian" id="guardian" aria-labelledby="guardian-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow amber">Guardian · AI safety layer</p>
+          <h2 id="guardian-title">When something goes wrong, Wayline doesn't wait.</h2>
+          <p class="lead">Guardian runs on the device whenever it's powered — and for about ten minutes after the car loses power, thanks to the built-in Guardian Reserve cell. Pick a scenario to watch the escalation unfold.</p>
+        </div>
+
+        <div class="gp reveal" id="gp">
+          <div class="gp-bar">
+            <div class="gp-tabs" role="group" aria-label="Choose a scenario">
+              <button class="gp-scenario" type="button" data-scenario="crash" aria-pressed="false"><span class="sw" aria-hidden="true"></span>Crash</button>
+              <button class="gp-scenario" type="button" data-scenario="unresponsive" aria-pressed="false"><span class="sw" aria-hidden="true"></span>Driver unresponsive</button>
+              <button class="gp-scenario" type="button" data-scenario="falsealarm" aria-pressed="false"><span class="sw" aria-hidden="true"></span>False alarm</button>
+            </div>
+            <div class="gp-meta">
+              <span>Simulated · 2× speed</span>
+              <button class="btn btn-sm btn-ghost" type="button" id="gp-replay" disabled>Replay</button>
+            </div>
+          </div>
+
+          <div class="gp-body">
+            <div class="gp-stage" id="gp-stage" data-tone="ok">
+              <div class="gp-status">
+                <span class="gp-state" id="gp-state">Armed</span>
+                <h3 id="gp-status">Guardian is standing by</h3>
+                <p id="gp-substatus">Choose a scenario above to start the simulation.</p>
+              </div>
+
+              <div class="gp-ring-wrap">
+                <svg class="gp-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="gp-ring-bg" cx="60" cy="60" r="52"/>
+                  <circle class="gp-ring-fg" id="gp-ring" cx="60" cy="60" r="52"/>
+                </svg>
+                <div class="gp-ring-center"><b id="gp-ring-num">10</b><span id="gp-ring-label">sec check-in</span></div>
+              </div>
+
+              <dl class="gp-metrics">
+                <div><dt>Peak accel</dt><dd id="gp-m-peak">—</dd></div>
+                <div><dt>Δv</dt><dd id="gp-m-dv">—</dd></div>
+                <div><dt>Speed</dt><dd id="gp-m-speed">—</dd></div>
+                <div><dt>GPS</dt><dd id="gp-m-loc">—</dd></div>
+              </dl>
+
+              <div class="gp-chips">
+                <span class="chip" id="gp-chip-logic">Escalation timer · armed</span>
+                <span class="chip" id="gp-chip-ai">AI · idle</span>
+                <span class="chip" id="gp-chip-hazard">Hazards · off</span>
+              </div>
+
+              <div class="gp-map" id="gp-map" aria-hidden="true">
+                <svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice">
+                  <rect width="400" height="170" fill="#070b11"/>
+                  <path d="M-10 128 C 70 104, 140 156, 228 126 S 360 84, 420 104" stroke="#0e1f31" stroke-width="18" fill="none"/>
+                  <g stroke="#141d29" stroke-width="2">
+                    <path d="M0 24H400M0 104H400M0 150H400M48 0V170M96 0V170M260 0V170M312 0V170M356 0V170"/>
+                  </g>
+                  <g stroke="#232f40" stroke-width="5" stroke-linecap="round">
+                    <path d="M0 62H400"/>
+                    <path d="M200 0V170"/>
+                    <path d="M0 168L400 8"/>
+                  </g>
+                  <path d="M200 170V85" stroke="#5aa8ff" stroke-opacity=".55" stroke-width="3" stroke-dasharray="2 7" stroke-linecap="round"/>
+                  <g class="pin" transform="translate(200 85)">
+                    <circle class="pulse" r="10" fill="none" stroke="#5aa8ff" stroke-width="2"/>
+                    <circle class="pulse p2" r="10" fill="none" stroke="#5aa8ff" stroke-width="2"/>
+                    <circle r="8" fill="#5aa8ff"/>
+                    <circle r="3.2" fill="#05070b"/>
+                  </g>
+                </svg>
+                <span class="gp-map-label" id="gp-map-label">Location · not shared</span>
+              </div>
+            </div>
+
+            <div class="gp-side">
+              <h4 class="gp-h">Escalation timeline</h4>
+              <ol class="gp-timeline" id="gp-timeline"></ol>
+              <h4 class="gp-h">Live transcript</h4>
+              <div class="gp-transcript" id="gp-transcript" role="log" aria-live="polite" aria-relevant="additions">
+                <p class="gp-empty">Transcript will appear here.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="gp-foot"><strong>AI helps the call happen faster; it never decides whether help is called.</strong> Escalation is owned by a deterministic, on-device timer. The AI interprets spoken replies and drafts the brief — if it's unreachable, Guardian uses built-in templates and still calls. Simulation; names and coordinates are illustrative.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DRIVER MONITORING ============ -->
+    <section class="section" id="driver-monitoring" aria-labelledby="dm-title">
+      <div class="container split reverse">
+        <figure class="panel dm-cam reveal" style="margin:0">
+          <div class="panel-top"><span>IR cabin camera · driver monitoring</span><span class="live"><i></i>tracking</span></div>
+          <div style="position:relative">
+            <svg viewBox="0 0 480 340" role="img" aria-label="Infrared cabin-camera view of a driver with face, eye and gaze tracking overlays">
+              <defs>
+                <radialGradient id="dm-face" cx="50%" cy="40%" r="62%"><stop offset="0" stop-color="#6a7889"/><stop offset="1" stop-color="#28323e"/></radialGradient>
+                <linearGradient id="dm-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3644"/><stop offset="1" stop-color="#10161e"/></linearGradient>
+              </defs>
+              <rect x="166" y="46" width="148" height="126" rx="44" fill="#121923"/>
+              <path d="M84 340 C 96 262, 158 240, 240 238 C 322 240, 384 262, 396 340 Z" fill="url(#dm-body)"/>
+              <rect x="214" y="196" width="52" height="52" rx="16" fill="#3a4554"/>
+              <ellipse cx="240" cy="148" rx="62" ry="76" fill="url(#dm-face)"/>
+              <path d="M178 140 C 176 92, 206 70, 240 70 C 276 70, 304 92, 302 140 C 292 112, 270 100, 240 100 C 210 100, 188 112, 178 140 Z" fill="#19212b"/>
+              <path d="M202 131 q14 -7 28 0 M250 131 q14 -7 28 0" stroke="#1b232d" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <g class="dm-eye"><ellipse cx="216" cy="146" rx="11" ry="5.5" fill="#0d1118"/><circle cx="214" cy="145" r="3" fill="#e9eef5" opacity=".85"/></g>
+              <g class="dm-eye"><ellipse cx="264" cy="146" rx="11" ry="5.5" fill="#0d1118"/><circle cx="262" cy="145" r="3" fill="#e9eef5" opacity=".85"/></g>
+              <path d="M240 152 l-6 22 h12" stroke="#2c3643" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M224 194 q16 8 32 0" stroke="#2c3643" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <g fill="none" stroke="#3cf2b0" stroke-width="1.6">
+                <rect x="164" y="64" width="152" height="170" rx="8" stroke-dasharray="14 8" opacity=".55"/>
+                <rect x="197" y="134" width="38" height="24" rx="5"/>
+                <rect x="245" y="134" width="38" height="24" rx="5"/>
+              </g>
+              <g fill="#3cf2b0" opacity=".75">
+                <circle cx="184" cy="162" r="2"/><circle cx="189" cy="182" r="2"/><circle cx="199" cy="199" r="2"/><circle cx="213" cy="212" r="2"/><circle cx="228" cy="220" r="2"/><circle cx="240" cy="222" r="2"/><circle cx="252" cy="220" r="2"/><circle cx="267" cy="212" r="2"/><circle cx="281" cy="199" r="2"/><circle cx="291" cy="182" r="2"/><circle cx="296" cy="162" r="2"/>
+                <circle cx="240" cy="174" r="2"/><circle cx="232" cy="194" r="2"/><circle cx="248" cy="194" r="2"/>
+              </g>
+              <g stroke="#5aa8ff" stroke-width="2" stroke-linecap="round" opacity=".9">
+                <path d="M214 145 L196 110"/><path d="M262 145 L244 110"/>
+              </g>
+              <circle cx="196" cy="110" r="3" fill="#5aa8ff"/><circle cx="244" cy="110" r="3" fill="#5aa8ff"/>
+              <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="11" fill="#3cf2b0">
+                <text x="166" y="58">FACE 0.99</text>
+                <text x="326" y="142">EYES · OPEN</text>
+                <text x="326" y="160" fill="#5aa8ff">GAZE · ROAD</text>
+              </g>
+              <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="10.5" fill="#75839a">
+                <text x="18" y="26">IR · CABIN</text>
+                <circle cx="438" cy="22" r="4" fill="#ff4d5e"/><text x="448" y="26" fill="#aab5c5">REC</text>
+              </g>
+            </svg>
+            <div class="dm-scan" aria-hidden="true"></div>
+          </div>
+          <div class="dm-readout">
+            <div><span>Face</span><b>Detected</b></div>
+            <div><span>Eyes</span><b>Open</b></div>
+            <div><span>Gaze</span><b>On road</b></div>
+          </div>
+          <div class="attention">
+            <span>Attention</span>
+            <div class="attention-track"><div class="attention-fill"></div></div>
+            <b>Attentive</b>
+          </div>
+        </figure>
+
+        <div class="reveal" data-delay="1">
+          <p class="eyebrow info">Driver monitoring</p>
+          <h2 id="dm-title">Hands off is fine. Eyes off is not.</h2>
+          <p class="lead">Wayline is driver assistance, not self-driving. An infrared camera watches for distraction and drowsiness, and the response escalates step by step — all the way to bringing the car to a controlled stop if you stop responding.</p>
+          <ol class="ladder">
+            <li><i aria-hidden="true"></i><div><b>Attentive</b><small>Eyes on the road — assistance stays engaged</small></div><span class="when">ok</span></li>
+            <li><i aria-hidden="true"></i><div><b>Visual alert</b><small>Eyes off the road for a few seconds</small></div><span class="when">step 1</span></li>
+            <li><i aria-hidden="true"></i><div><b>Audible alert</b><small>Chime and spoken prompt</small></div><span class="when">step 2</span></li>
+            <li><i aria-hidden="true"></i><div><b>Take control</b><small>Urgent alert — driver must respond</small></div><span class="when">step 3</span></li>
+            <li><i aria-hidden="true"></i><div><b>Emergency Stop Assist</b><small>Slows to a stop in lane, hazards on — then Guardian checks in</small></div><span class="when">step 4</span></li>
+          </ol>
+          <p class="note">In the reference stack: alerts begin within seconds of eyes leaving the road (immediately for a microsleep), and Emergency Stop Assist starts after about 15 seconds without any response.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ HARDWARE ============ -->
+    <section class="section" id="hardware" aria-labelledby="hw-title">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <p class="eyebrow">Wayline One</p>
+            <h2 id="hw-title">Built to keep working when the car can't.</h2>
+            <p class="lead">Wayline One mounts behind your rear-view mirror and plugs into the car's lane-keep camera harness. Inside: the sensors for driving, a camera for you, and a reserve cell for the worst moments.</p>
+            <ol class="hw-legend">
+              <li><span class="n">1</span><div><b>IR driver camera</b><small>Infrared illuminators — night &amp; sunglasses</small></div></li>
+              <li><span class="n">2</span><div><b>OLED status display</b><small>Engagement, alerts and Guardian state</small></div></li>
+              <li><span class="n">3</span><div><b>4-mic cabin array</b><small>Hears you clearly for voice check-ins</small></div></li>
+              <li><span class="n">4</span><div><b>Speaker</b><small>Spoken alerts and two-way calls</small></div></li>
+              <li><span class="n">5</span><div><b>Physical SOS button</b><small>Ask for help with one press</small></div></li>
+              <li><span class="n">6</span><div><b>Mount &amp; harness port</b><small>Windshield mount, car harness included</small></div></li>
+              <li><span class="n">7</span><div><b>3 forward road cameras</b><small>Wide · main · narrow (road side)</small></div></li>
+              <li><span class="n">8</span><div><b>Guardian Reserve</b><small>Internal backup cell, ~10 min after power loss</small></div></li>
+            </ol>
+          </div>
+
+          <figure class="panel hw-figure reveal" data-delay="1">
+            <div class="panel-top"><span>Wayline One · cabin side</span><span class="tag">Target spec</span></div>
+            <div class="panel-body">
+              <svg viewBox="0 0 640 330" role="img" aria-label="Illustration of Wayline One's cabin-facing side with numbered components: IR camera, OLED display, microphones, speaker, SOS button and mount.">
+                <defs>
+                  <linearGradient id="hw-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d2734"/><stop offset="1" stop-color="#0b1119"/></linearGradient>
+                  <linearGradient id="hw-edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".22"/><stop offset="1" stop-color="#ffffff" stop-opacity=".03"/></linearGradient>
+                  <radialGradient id="hw-lens" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#3d5f80"/><stop offset=".5" stop-color="#0d1622"/><stop offset="1" stop-color="#04070c"/></radialGradient>
+                  <pattern id="hw-grille" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.6" fill="#04070c"/></pattern>
+                  <linearGradient id="hw-oled" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3cf2b0"/><stop offset="1" stop-color="#5aa8ff"/></linearGradient>
+                </defs>
+                <ellipse cx="320" cy="300" rx="240" ry="16" fill="#000" opacity=".55"/>
+                <rect x="268" y="8" width="104" height="14" rx="7" fill="#1b2431"/>
+                <rect x="286" y="16" width="68" height="56" rx="12" fill="#111822" stroke="url(#hw-edge)"/>
+                <rect x="70" y="60" width="500" height="212" rx="40" fill="url(#hw-body)" stroke="url(#hw-edge)" stroke-width="1.5"/>
+                <rect x="82" y="72" width="476" height="188" rx="32" fill="none" stroke="#ffffff" stroke-opacity=".045"/>
+                <!-- IR camera -->
+                <circle cx="160" cy="166" r="36" fill="#090e15" stroke="#ffffff" stroke-opacity=".08"/>
+                <circle cx="160" cy="166" r="23" fill="url(#hw-lens)"/>
+                <circle cx="153" cy="158" r="5" fill="#a9cdf0" opacity=".35"/>
+                <circle cx="108" cy="166" r="6.5" fill="#3a1418" stroke="#ff4d5e" stroke-opacity=".4"/>
+                <circle cx="212" cy="166" r="6.5" fill="#3a1418" stroke="#ff4d5e" stroke-opacity=".4"/>
+                <!-- OLED -->
+                <rect x="250" y="114" width="184" height="104" rx="14" fill="#03060a" stroke="#ffffff" stroke-opacity=".07"/>
+                <g font-family="JetBrains Mono, ui-monospace, monospace">
+                  <text x="268" y="140" font-size="10" fill="#75839a" letter-spacing="1.5">GUARDIAN</text>
+                  <text x="268" y="160" font-size="15" fill="#3cf2b0" font-weight="600">ARMED</text>
+                  <text x="268" y="204" font-size="22" fill="#e9eef5" font-weight="600">62</text>
+                  <text x="300" y="204" font-size="10" fill="#75839a">MPH</text>
+                </g>
+                <g stroke="url(#hw-oled)" stroke-width="2.4" stroke-linecap="round" fill="none">
+                  <path d="M376 206 L392 136"/><path d="M420 206 L404 136"/>
+                </g>
+                <path d="M398 200v-6M398 184v-6M398 168v-6M398 152v-6" stroke="#e9eef5" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+                <!-- mics -->
+                <circle cx="104" cy="96" r="2.8" fill="#04070c"/><circle cx="536" cy="96" r="2.8" fill="#04070c"/>
+                <circle cx="104" cy="236" r="2.8" fill="#04070c"/><circle cx="536" cy="236" r="2.8" fill="#04070c"/>
+                <!-- speaker -->
+                <rect x="462" y="112" width="72" height="72" rx="14" fill="url(#hw-grille)" stroke="#ffffff" stroke-opacity=".05"/>
+                <!-- SOS -->
+                <circle cx="498" cy="224" r="21" fill="#2a0d12" stroke="#ff4d5e" stroke-width="2"/>
+                <text x="498" y="228" text-anchor="middle" font-family="JetBrains Mono, ui-monospace, monospace" font-size="11" font-weight="700" fill="#ff8a95">SOS</text>
+                <!-- markers -->
+                <g fill="#05070b" stroke="#3cf2b0" stroke-width="1.5">
+                  <path d="M160 116 V128" stroke-dasharray="2 3"/>
+                  <path d="M118 236 H109" stroke-dasharray="2 3"/>
+                  <path d="M476 224 H468" stroke-dasharray="2 3"/>
+                  <path d="M372 34 H360" stroke-dasharray="2 3"/>
+                </g>
+                <g class="hw-num" text-anchor="middle">
+                  <g transform="translate(160 104)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">1</text></g>
+                  <g transform="translate(342 98)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">2</text></g>
+                  <g transform="translate(131 236)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">3</text></g>
+                  <g transform="translate(498 96)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">4</text></g>
+                  <g transform="translate(456 224)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">5</text></g>
+                  <g transform="translate(386 34)"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">6</text></g>
+                </g>
+              </svg>
+            </div>
+            <div class="panel-top" style="border-top:1px solid var(--line);border-bottom:0"><span>Road side · 7 &nbsp;·&nbsp; inside · 8</span><span>illustration</span></div>
+            <div class="panel-body" style="padding-top:8px">
+              <svg viewBox="0 0 640 150" role="img" aria-label="Road-facing side with three forward cameras — wide, main and narrow — and the internal Guardian Reserve cell.">
+                <defs>
+                  <radialGradient id="hw-lens2" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#3d5f80"/><stop offset=".5" stop-color="#0d1622"/><stop offset="1" stop-color="#04070c"/></radialGradient>
+                </defs>
+                <rect x="40" y="18" width="330" height="110" rx="30" fill="#141c27" stroke="#ffffff" stroke-opacity=".12"/>
+                <circle cx="130" cy="73" r="16" fill="url(#hw-lens2)" stroke="#ffffff" stroke-opacity=".1"/>
+                <circle cx="205" cy="73" r="22" fill="url(#hw-lens2)" stroke="#ffffff" stroke-opacity=".1"/>
+                <circle cx="280" cy="73" r="13" fill="url(#hw-lens2)" stroke="#ffffff" stroke-opacity=".1"/>
+                <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" fill="#75839a" text-anchor="middle">
+                  <text x="130" y="112">WIDE</text><text x="205" y="112">MAIN</text><text x="280" y="112">NARROW</text>
+                </g>
+                <g transform="translate(70 30)" class="hw-num" text-anchor="middle"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">7</text></g>
+                <rect x="410" y="38" width="190" height="70" rx="14" fill="#0d141d" stroke="#ffb547" stroke-opacity=".5" stroke-dasharray="5 4"/>
+                <rect x="428" y="56" width="118" height="34" rx="6" fill="none" stroke="#ffb547" stroke-width="1.6"/>
+                <rect x="546" y="66" width="8" height="14" rx="2" fill="#ffb547"/>
+                <rect x="432" y="60" width="78" height="26" rx="4" fill="#ffb547" opacity=".55"/>
+                <text x="568" y="77" font-family="JetBrains Mono, ui-monospace, monospace" font-size="10" fill="#ffb547">~10m</text>
+                <g transform="translate(410 38)" class="hw-num" text-anchor="middle"><circle r="12" fill="#05070b" stroke="#3cf2b0" stroke-width="1.5"/><text y="4.5" fill="#3cf2b0">8</text></g>
+              </svg>
+            </div>
+          </figure>
+        </div>
+
+        <div class="spec-head reveal">
+          <h3>Target spec</h3>
+          <span class="tag amber">Engineering targets — not final</span>
+        </div>
+        <div class="grid-4 specs reveal">
+          <div class="spec"><span class="num grad-text" data-count="3">3</span><p>Forward road cameras — wide, main and narrow</p></div>
+          <div class="spec"><span class="num grad-text" data-count="200" data-prefix="±" data-suffix=" g">±200 g</span><p>High-g IMU for crash detection</p></div>
+          <div class="spec"><span class="num grad-text" data-count="10" data-prefix="~" data-suffix=" min">~10 min</span><p>Guardian Reserve runtime after power loss</p></div>
+          <div class="spec"><span class="num grad-text" data-count="4">4</span><p>Cabin microphones + speaker for voice check-ins</p></div>
+          <div class="spec"><span class="num grad-text" data-count="3" data-suffix="×">3×</span><p>CAN-FD vehicle interfaces</p></div>
+          <div class="spec"><span class="num grad-text">IR</span><p>Driver-monitoring camera with infrared illumination</p></div>
+          <div class="spec"><span class="num grad-text">LTE</span><p>Built-in eSIM connectivity, plus Wi-Fi</p></div>
+          <div class="spec"><span class="num grad-text" data-count="2" data-suffix="-band">2-band</span><p>Dual-band GNSS for precise location</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTALL ============ -->
+    <section class="section" id="install" aria-labelledby="install-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Install</p>
+          <h2 id="install-title">Fifteen minutes. No cutting, no splicing.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card step reveal">
+            <div class="step-n" aria-hidden="true">01</div>
+            <h3>Check your car</h3>
+            <p>Wayline is designed for cars that already ship with factory lane-keep assist and adaptive cruise — hundreds of models across major brands.</p>
+            <span class="tag">Compatibility checker at launch</span>
+          </article>
+          <article class="card step reveal" data-delay="1">
+            <div class="step-n" aria-hidden="true">02</div>
+            <h3>Plug it in</h3>
+            <p>Pop off the mirror cover, connect the included harness to the lane-keep camera, and stick the mount to the windshield. Fully reversible.</p>
+            <span class="tag">~15 minutes</span>
+          </article>
+          <article class="card step reveal" data-delay="2">
+            <div class="step-n" aria-hidden="true">03</div>
+            <h3>Drive</h3>
+            <p>Engage with your cruise buttons. Guardian arms itself every time the car starts — no app or subscription required.</p>
+            <span class="tag lane">Guardian armed by default</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="pricing-head">
+          <div class="section-head reveal">
+            <p class="eyebrow">Planned pricing</p>
+            <h2 id="pricing-title">We never paywall safety.</h2>
+            <p class="lead">Every Wayline gets crash detection, unresponsive-driver stop and emergency-contact alerts for free, forever. Plus adds connectivity and people — a 24/7 response center that can get emergency services moving.</p>
+          </div>
+          <div class="billing reveal" data-delay="1">
+            <span id="bill-monthly" class="on">Monthly</span>
+            <button class="switch" type="button" role="switch" aria-checked="false" id="billing-switch" aria-labelledby="bill-label"></button>
+            <span id="bill-yearly">Yearly</span>
+            <span class="save">save $38</span>
+            <span id="bill-label" class="sr-only">Bill Plus yearly</span>
+          </div>
+        </div>
+
+        <div class="tiers">
+          <article class="card tier reveal">
+            <div class="tier-top"><h3>Core</h3><span class="tag">Free forever</span></div>
+            <div class="price"><b>$0</b><span>/ forever</span></div>
+            <p class="price-note">&nbsp;</p>
+            <p class="desc">Everything you need to drive with Wayline — and to get help if something happens.</p>
+            <ul class="ticks">
+              <li>All Wayline OS driving features</li>
+              <li><strong>Guardian Core:</strong> crash detection &amp; unresponsive-driver stop</li>
+              <li>Emergency-contact alerts via your phone or Wi-Fi</li>
+              <li>7 days of drive storage</li>
+              <li>Over-the-air updates</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://github.com/NeoFrees/wayline">Follow the build</a>
+          </article>
+
+          <article class="card tier is-featured reveal" data-delay="1">
+            <div class="tier-top"><h3>Plus</h3><span class="tag lane">Most complete</span></div>
+            <div class="price"><b id="plus-price">$19</b><span id="plus-period">/ month</span></div>
+            <p class="price-note" id="plus-note">or $190 billed yearly</p>
+            <p class="desc">Wayline that works without your phone — with trained people ready to help, around the clock.</p>
+            <ul class="ticks">
+              <li>Everything in Core</li>
+              <li>Built-in LTE connectivity</li>
+              <li><strong>24/7 human response center</strong> + emergency services relay</li>
+              <li>Roadside assistance dispatch</li>
+              <li>1-year drive vault · live view &amp; remote location</li>
+              <li>AI voice copilot</li>
+              <li>Extended warranty while subscribed</li>
+            </ul>
+            <a class="btn btn-primary" href="https://github.com/NeoFrees/wayline">Star the repo</a>
+          </article>
+
+          <article class="card tier reveal" data-delay="2">
+            <div class="tier-top"><h3>Fleet</h3><span class="tag info">5+ vehicles</span></div>
+            <div class="price"><b>$39</b><span>/ vehicle / month</span></div>
+            <p class="price-note">&nbsp;</p>
+            <p class="desc">For delivery, service and rideshare fleets that want safer drivers and faster incident response.</p>
+            <ul class="ticks">
+              <li>Everything in Plus, per vehicle</li>
+              <li>Fleet dashboard &amp; incident reports</li>
+              <li>Driver coaching insights</li>
+              <li>API &amp; webhooks</li>
+              <li>Priority support</li>
+            </ul>
+            <a class="btn btn-ghost" href="business.html">Read the business plan</a>
+          </article>
+        </div>
+
+        <article class="card hw-card reveal">
+          <svg class="hw-mini" viewBox="0 0 240 120" aria-hidden="true">
+            <defs><radialGradient id="hw-lens3" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#3d5f80"/><stop offset=".5" stop-color="#0d1622"/><stop offset="1" stop-color="#04070c"/></radialGradient></defs>
+            <rect x="96" y="2" width="48" height="26" rx="8" fill="#111822"/>
+            <rect x="10" y="22" width="220" height="90" rx="26" fill="#18212d" stroke="#ffffff" stroke-opacity=".12"/>
+            <circle cx="70" cy="67" r="13" fill="url(#hw-lens3)"/><circle cx="120" cy="67" r="18" fill="url(#hw-lens3)"/><circle cx="168" cy="67" r="11" fill="url(#hw-lens3)"/>
+          </svg>
+          <div>
+            <h3>Wayline One</h3>
+            <p>The device. Required for every plan.</p>
+            <ul class="ticks">
+              <li>Car harness included</li>
+              <li>30-day money-back trial</li>
+              <li>1-year warranty (+1 year while on Plus)</li>
+              <li>Opt-in insurance partnerships may offer usage-based discounts</li>
+            </ul>
+          </div>
+          <div class="price-wrap">
+            <div class="price"><b>$1,199</b></div>
+            <small>One-time · planned price</small>
+          </div>
+        </article>
+
+        <p class="fineprint">Planned pricing for launch, shown for illustration and subject to change. Wayline is in development and is not for sale.</p>
+      </div>
+    </section>
+
+    <!-- ============ OPEN SOURCE ============ -->
+    <section class="section" id="open-source" aria-labelledby="os-title" style="padding-top:0">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">Open source</p>
+          <h2 id="os-title">Read every line that steers your car.</h2>
+          <p class="lead">Wayline OS is MIT-licensed. The reference stack — lane perception, lateral control with safety limits, driver monitoring, crash detection and Guardian's escalation logic — runs entirely in simulation, so you can explore it without a car.</p>
+          <ul class="ticks os-points">
+            <li><strong>Deterministic safety core</strong> with unit tests for every escalation path</li>
+            <li><strong>Pluggable AI layer</strong> for speech understanding and incident briefs — with offline fallbacks</li>
+            <li><strong>Scenario simulator</strong>: lane keeping, drowsy driver, crash, false alarm</li>
+          </ul>
+          <div class="os-ctas">
+            <a class="btn btn-primary" href="https://github.com/NeoFrees/wayline">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+              Read the code
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/NeoFrees/wayline">Star the repo</a>
+          </div>
+        </div>
+
+        <div class="terminal reveal" data-delay="1" role="region" aria-label="Example terminal session">
+          <div class="terminal-bar"><i></i><i></i><i></i><span>~/wayline — zsh</span></div>
+<pre><code><span class="p">$</span> <span class="c">git clone https://github.com/NeoFrees/wayline.git</span>
+<span class="p">$</span> <span class="c">cd wayline &amp;&amp; pip install -e ".[dev]"</span>
+<span class="p">$</span> <span class="c">python -m wayline.sim crash</span>
+<span class="t">  1.00s</span> <span class="d">controls</span> ENGAGED: lane centering + ACC at 45 km/h
+<span class="t">  8.10s</span> <span class="r">guardian</span> crash — frontal · Δv 38 km/h · peak 16.1 g
+<span class="t">  8.10s</span> <span class="g">voice   </span> "Are you okay? I'll call for help in 10 seconds."
+<span class="t"> 13.10s</span> <span class="g">voice   </span> "Calling for help in 5 seconds."
+<span class="t"> 18.10s</span> <span class="r">guardian</span> Calling for help — no response
+<span class="t"> 18.10s</span> <span class="d">dispatch</span> response_center → delivered
+<span class="t"> 18.10s</span> <span class="d">dispatch</span> sms → Sam Lee: delivered
+<span class="t"> 18.10s</span> <span class="d">dispatch</span> sms → Alex Rivera: delivered
+<span class="ok">✓ 106 tests · 9 scenarios · all in simulation</span></code></pre>
+          <div class="terminal-note">Abridged output from the repository's simulator (dry-run delivery; names are fictional).</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ SAFETY PRINCIPLES ============ -->
+    <section class="section" id="safety" aria-labelledby="safety-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Safety principles</p>
+          <h2 id="safety-title">Four promises we design around.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card principle reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M3.5 10.5h6.5M14 10.5h6.5M12 14v7"/></svg></div>
+            <div><h3>Hands off, eyes on.</h3><p>You are always the driver. Wayline is Level 2 driver assistance: it needs your attention every second, and IR driver monitoring makes sure it has it.</p></div>
+          </article>
+          <article class="card principle reveal" data-delay="1" data-tone="amber">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.3 8.3-8 9-4.7-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <div><h3>AI never gates the call.</h3><p>Escalation runs on a deterministic, on-device timer. AI makes help faster — understanding speech, drafting the brief — but it can't block or delay a call. If it's offline, Guardian still calls.</p></div>
+          </article>
+          <article class="card principle reveal" data-tone="info">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+            <div><h3>Hard limits, always on.</h3><p>Steering torque and its rate of change are clamped by a separate safety layer. Touching the brake or turning the wheel always wins.</p></div>
+          </article>
+          <article class="card principle reveal" data-delay="1">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+            <div><h3>Your drives are yours.</h3><p>Processing happens on the device. Uploading drives and sharing data to improve models are opt-in, and you can delete everything at any time.</p></div>
+          </article>
+        </div>
+        <div class="l2-note reveal">
+          <span class="tag amber">Important</span>
+          <span>Wayline does not make a car self-driving and does not prevent every crash. Guardian is a safety net — not a substitute for attentive driving.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq" aria-labelledby="faq-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Questions, answered plainly.</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Is Wayline self-driving?</summary>
+            <div><p>No. Wayline is Level 2 driver assistance — lane centering and adaptive cruise that you supervise at all times. Driver monitoring checks that your eyes are on the road, and you can take over instantly by steering or braking.</p></div>
+          </details>
+          <details>
+            <summary>Can I buy one today?</summary>
+            <div><p>Not yet. Wayline is a concept-stage company: the reference software is open source and runs in simulation, and the hardware is being designed. Prices on this page are planned, not offers. <a href="https://github.com/NeoFrees/wayline">Follow the build on GitHub</a> to see progress.</p></div>
+          </details>
+          <details>
+            <summary>Which cars will it work with?</summary>
+            <div><p>Wayline is built on open-source car-interface databases that cover hundreds of models shipping with factory lane-keep assist and adaptive cruise. A compatibility checker will be available at launch.</p></div>
+          </details>
+          <details>
+            <summary>Does Guardian call 911 automatically?</summary>
+            <div><p>On Core, Guardian alerts your emergency contacts with your location and a crash summary. On Plus, it connects to a 24/7 response center whose trained staff can request emergency services and stay with you. Wayline doesn't place automated calls directly to emergency numbers — rules on that vary by region, and a trained human relay gives dispatchers better information.</p></div>
+          </details>
+          <details>
+            <summary>What if there's no signal, or the AI is unreachable?</summary>
+            <div><p>The decision to escalate is made on the device by a deterministic timer, not by the AI. Messages queue and retry when a connection returns, briefs fall back to built-in templates, and the Guardian Reserve cell keeps the system running for about ten minutes if the car loses power.</p></div>
+          </details>
+          <details>
+            <summary>Do I need a subscription?</summary>
+            <div><p>No. Core is free forever and includes all driving features plus Guardian Core. Plus is optional and adds built-in LTE, the response center, roadside dispatch, a 1-year drive vault and more.</p></div>
+          </details>
+          <details>
+            <summary>What happens to my data?</summary>
+            <div><p>Driving and driver-monitoring processing happen on the device. Uploading drives, sharing data to improve models, and insurance programs are all opt-in, and you can delete your data at any time.</p></div>
+          </details>
+          <details>
+            <summary>Will it affect my car's warranty or my insurance?</summary>
+            <div><p>Installation is non-destructive and reversible, but policies differ — check with your vehicle manufacturer and insurer before installing any aftermarket driver-assistance device.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section" aria-labelledby="cta-title" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <p class="eyebrow">Follow along</p>
+          <h2 id="cta-title">Help build the copilot that has your back.</h2>
+          <p class="lead">Wayline is being built in the open. Star the repository, try the simulator, and read how the business is meant to work.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://github.com/NeoFrees/wayline">Follow the build on GitHub</a>
+            <a class="btn btn-ghost" href="business.html">Read the business plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="./" aria-label="Wayline — home">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="wl-g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3cf2b0"/><stop offset="1" stop-color="#5aa8ff"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#0b111a"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/><path d="M14 19 L23.5 46 L32 28 L40.5 46 L50 19" fill="none" stroke="url(#wl-g2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Wayline</span>
+          </a>
+          <p>The AI copilot that keeps you in your lane — and calls for help when you can't.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#hardware">Wayline One</a></li>
+            <li><a href="#lane-assist">Wayline OS</a></li>
+            <li><a href="#guardian">Guardian</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="business.html">Business model</a></li>
+            <li><a href="business.html#roadmap">Roadmap</a></li>
+            <li><a href="#safety">Safety principles</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Open source</h4>
+          <ul>
+            <li><a href="https://github.com/NeoFrees/wayline">GitHub repository</a></li>
+            <li><a href="https://github.com/NeoFrees/wayline/blob/main/docs/BUSINESS_MODEL.md">Business plan (full)</a></li>
+            <li><a href="https://github.com/NeoFrees/wayline/issues">Report an issue</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>
+        <span>Wayline is a concept-stage prototype. Not for sale. Not certified for use on public roads. Driver-assistance features require an attentive driver at all times.</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Wayline (concept). Software released under the MIT License.</span>
+        <span>Designed for attentive drivers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/hero.js" defer></script>
+  <script src="assets/js/lanes.js" defer></script>
+  <script src="assets/js/guardian.js" defer></script>
+</body>
+</html>

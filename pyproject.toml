@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wayline"
+version = "0.1.0"
+description = "Reference implementation of the Wayline AI driving copilot: lane assist, driver monitoring, Emergency Stop Assist and the Guardian emergency layer (simulation-first prototype)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+keywords = ["adas", "lane-keeping", "driver-monitoring", "crash-detection", "emergency", "simulation"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+ai = ["anthropic>=2.0,<3"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+wayline-sim = "wayline.sim.runner:main"
+
+[project.urls]
+Homepage = "https://neofrees.github.io/wayline/"
+Source = "https://github.com/NeoFrees/wayline"
+
+[tool.setuptools.packages.find]
+include = ["wayline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]

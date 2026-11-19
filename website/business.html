@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wayline — Business model</title>
+  <meta name="description" content="How Wayline is designed to work as a business: near-cost hardware, an open-source core, a free safety tier, and recurring revenue from connectivity, a 24/7 response center, fleets and insurance partnerships.">
+  <meta name="theme-color" content="#05070b">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://neofrees.github.io/wayline/business.html">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Wayline">
+  <meta property="og:title" content="Wayline — Business model">
+  <meta property="og:description" content="A safety company that happens to sell a copilot: hardware near cost, safety free forever, and recurring revenue from services people value.">
+  <meta property="og:url" content="https://neofrees.github.io/wayline/business.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wayline — Business model">
+  <meta name="twitter:description" content="Hardware near cost, safety free forever, recurring revenue from services people value.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container nav">
+      <a class="brand" href="./" aria-label="Wayline — home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="wl-g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3cf2b0"/><stop offset="1" stop-color="#5aa8ff"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#0b111a"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/><path d="M14 19 L23.5 46 L32 28 L40.5 46 L50 19" fill="none" stroke="url(#wl-g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Wayline</span>
+      </a>
+      <nav class="nav-links" id="nav-menu" aria-label="Primary">
+        <a href="index.html#product">Product</a>
+        <a href="index.html#guardian">Guardian</a>
+        <a href="index.html#safety">Safety</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#open-source">Open source</a>
+        <a href="business.html" aria-current="page">Business</a>
+        <a class="btn btn-sm nav-cta-mobile" href="https://github.com/NeoFrees/wayline">Follow the build on GitHub</a>
+      </nav>
+      <a class="btn btn-sm btn-ghost nav-cta" href="https://github.com/NeoFrees/wayline">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        Follow the build
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero" aria-labelledby="biz-title">
+      <div class="container">
+        <p class="pill"><span class="pill-dot" aria-hidden="true"></span>Business model · concept stage</p>
+        <h1 id="biz-title">A safety company that happens to sell a <span class="grad-text">copilot.</span></h1>
+        <p class="lead">Wayline's model: hardware priced near cost, an open-source core that compounds through its community, safety features that are free forever — and recurring revenue from the services people actually value: connectivity, a human response center, and fleet tools.</p>
+        <div class="glance">
+          <div><b>5</b><span>revenue streams</span></div>
+          <div><b>$0</b><span>for every safety feature</span></div>
+          <div><b>MIT</b><span>open-source core</span></div>
+          <div><b>3</b><span>customer segments</span></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ MISSION / PROBLEM ============ -->
+    <section class="section" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The problem</p>
+          <h2 id="problem-title">The hardware is already in the car. The safety net isn't.</h2>
+          <p class="lead">Our mission is to make every car on the road a little smarter and a lot less lonely in an emergency — without asking anyone to buy a new car.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card problem reveal">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 21 10 3"/><path d="M17 21 14 3"/><path d="M12 19v-2M12 13v-2M12 7V5"/></svg></div>
+            <h3>Great sensors, timid software</h3>
+            <p>Millions of cars ship with the cameras, radar and steering actuators needed for lane-keep and adaptive cruise — but the factory software often uses only a fraction of what that hardware can do.</p>
+          </article>
+          <article class="card problem reveal" data-delay="1" data-tone="amber">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+            <h3>When nobody can make the call</h3>
+            <p>After a serious crash or a medical event at the wheel, the person who most needs help is often the one least able to ask for it — especially when driving alone.</p>
+          </article>
+          <article class="card problem reveal" data-delay="2" data-tone="info">
+            <div class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+            <h3>Safety services are tied to new cars</h3>
+            <p>Connected-safety features are usually bundled with new vehicles and brand subscriptions. The cars people already own — and keep for years — are left out.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVENUE STREAMS ============ -->
+    <section class="section" id="model" aria-labelledby="model-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">The model</p>
+          <h2 id="model-title">Five ways Wayline earns — none of them by paywalling safety.</h2>
+          <p class="lead">Hardware gets Wayline into the car. Services keep the lights on. The open-source community makes the product better and the car list longer, faster than a closed team could.</p>
+        </div>
+        <div class="streams">
+          <article class="card stream reveal">
+            <span class="tag lane">01 · Hardware</span>
+            <h3>Wayline One</h3>
+            <div class="amount">$1,199</div>
+            <p>One-time device purchase, car harness included, 30-day money-back trial. Priced to grow the installed base, not to maximize margin.</p>
+            <span class="role">Role: acquisition</span>
+          </article>
+          <article class="card stream reveal" data-delay="1">
+            <span class="tag lane">02 · Subscription</span>
+            <h3>Wayline Plus</h3>
+            <div class="amount">$19<small style="font-size:.9rem;color:var(--text-3)"> / mo</small></div>
+            <p>$190/yr. Built-in LTE, 24/7 human response center, roadside dispatch, 1-year drive vault, live view, AI voice copilot, extended warranty.</p>
+            <span class="role">Role: recurring core</span>
+          </article>
+          <article class="card stream reveal" data-delay="2">
+            <span class="tag info">03 · B2B</span>
+            <h3>Wayline Fleet</h3>
+            <div class="amount">$39<small style="font-size:.9rem;color:var(--text-3)"> / vehicle / mo</small></div>
+            <p>Dashboards, incident reports, driver coaching, API &amp; webhooks for delivery, service and rideshare fleets (5+ vehicles).</p>
+            <span class="role">Role: high-value recurring</span>
+          </article>
+          <article class="card stream reveal">
+            <span class="tag amber">04 · Partnerships</span>
+            <h3>Insurance programs</h3>
+            <div class="amount">Rev-share</div>
+            <p>Opt-in usage-based insurance: drivers who choose to share driving data can earn discounts; Wayline earns referral or revenue-share fees.</p>
+            <span class="role">Role: lowers customer cost</span>
+          </article>
+          <article class="card stream reveal" data-delay="1">
+            <span class="tag">05 · Ecosystem</span>
+            <h3>Integration &amp; accessories</h3>
+            <div class="amount">Services</div>
+            <p>Paid vehicle-integration work for fleets, upfitters and suppliers, plus harnesses, mounts and spare parts.</p>
+            <span class="role">Role: margin + coverage</span>
+          </article>
+        </div>
+
+        <div class="freepaid">
+          <div class="card reveal">
+            <h3><span class="tag lane">Free forever</span> What every owner gets</h3>
+            <ul class="ticks">
+              <li>All Wayline OS driving features and OTA updates</li>
+              <li>Crash detection and unresponsive-driver Emergency Stop Assist</li>
+              <li>Emergency-contact alerts with location via phone or Wi-Fi</li>
+              <li>7 days of drive storage</li>
+              <li>The full open-source code</li>
+            </ul>
+          </div>
+          <div class="card reveal" data-delay="1">
+            <h3><span class="tag info">Paid</span> What costs us money to run</h3>
+            <ul class="ticks">
+              <li>Cellular data (built-in LTE)</li>
+              <li>A staffed 24/7 response center and emergency services relay</li>
+              <li>Roadside assistance dispatch</li>
+              <li>Cloud storage for a 1-year drive vault and live view</li>
+              <li>Fleet software, APIs and priority support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ FLYWHEEL ============ -->
+    <section class="section" aria-labelledby="flywheel-title">
+      <div class="container split">
+        <div class="reveal">
+          <p class="eyebrow">The flywheel</p>
+          <h2 id="flywheel-title">Open source is the growth engine.</h2>
+          <p class="lead">Every driver who installs Wayline can — if they choose — contribute anonymized driving data, and every developer can contribute support for a new car. Both make the product better for the next driver.</p>
+          <ul class="ticks" style="margin-top:28px">
+            <li><strong>Lower acquisition cost:</strong> community, word of mouth and creators instead of expensive ad spend</li>
+            <li><strong>Faster coverage:</strong> community car ports extend the list of supported models</li>
+            <li><strong>Trust:</strong> anyone can audit the code that steers their car</li>
+            <li><strong>Privacy by design:</strong> data sharing is opt-in, and drivers can delete their data</li>
+          </ul>
+        </div>
+        <figure class="flywheel reveal" data-delay="1" style="margin:0">
+          <svg viewBox="0 0 600 540" role="img" aria-label="Flywheel: more drivers lead to more opt-in data and community car ports, which lead to better models and wider car support, which make a safer product, which attracts more drivers. Open source sits at the center.">
+            <defs>
+              <marker id="fw-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="#3cf2b0"/>
+              </marker>
+              <radialGradient id="fw-core" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#15302a"/><stop offset="1" stop-color="#0b111a"/></radialGradient>
+            </defs>
+            <circle class="spin" style="transform-origin:300px 270px" cx="300" cy="270" r="236" fill="none" stroke="rgba(150,175,210,.18)" stroke-width="1" stroke-dasharray="2 10"/>
+            <circle cx="300" cy="270" r="190" fill="none" stroke="rgba(150,175,210,.08)" stroke-width="22"/>
+            <g fill="none" stroke="#3cf2b0" stroke-width="2.5" stroke-linecap="round" marker-end="url(#fw-arrow)">
+              <path d="M371.2 93.8 A190 190 0 0 1 476.2 198.8"/>
+              <path d="M476.2 341.2 A190 190 0 0 1 371.2 446.2"/>
+              <path d="M228.8 446.2 A190 190 0 0 1 123.8 341.2"/>
+              <path d="M123.8 198.8 A190 190 0 0 1 228.8 93.8"/>
+            </g>
+            <circle cx="300" cy="270" r="80" fill="url(#fw-core)" stroke="#3cf2b0" stroke-opacity=".5"/>
+            <g text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif">
+              <text x="300" y="262" font-size="19" font-weight="600" fill="#e9eef5">Open-source</text>
+              <text x="300" y="286" font-size="19" font-weight="600" fill="#3cf2b0">core</text>
+            </g>
+            <g font-family="Inter, system-ui, sans-serif" text-anchor="middle">
+              <g transform="translate(300 80)">
+                <rect x="-88" y="-34" width="176" height="68" rx="16" fill="#0f1722" stroke="rgba(150,175,210,.22)"/>
+                <text y="-6" font-size="15" font-weight="600" fill="#e9eef5">More drivers</text>
+                <text y="15" font-size="12" fill="#aab5c5">install Wayline One</text>
+              </g>
+              <g transform="translate(490 270)">
+                <rect x="-88" y="-34" width="176" height="68" rx="16" fill="#0f1722" stroke="rgba(150,175,210,.22)"/>
+                <text y="-6" font-size="15" font-weight="600" fill="#e9eef5">Opt-in drive data</text>
+                <text y="15" font-size="12" fill="#aab5c5">+ community car ports</text>
+              </g>
+              <g transform="translate(300 460)">
+                <rect x="-88" y="-34" width="176" height="68" rx="16" fill="#0f1722" stroke="rgba(150,175,210,.22)"/>
+                <text y="-6" font-size="15" font-weight="600" fill="#e9eef5">Better models</text>
+                <text y="15" font-size="12" fill="#aab5c5">&amp; wider car support</text>
+              </g>
+              <g transform="translate(110 270)">
+                <rect x="-88" y="-34" width="176" height="68" rx="16" fill="#0f1722" stroke="rgba(150,175,210,.22)"/>
+                <text y="-6" font-size="15" font-weight="600" fill="#e9eef5">Safer product</text>
+                <text y="15" font-size="12" fill="#aab5c5">smoother driving, Guardian</text>
+              </g>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ UNIT ECONOMICS ============ -->
+    <section class="section" id="economics" aria-labelledby="econ-title" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow amber">Unit economics</p>
+          <h2 id="econ-title">The assumptions we're designing toward.</h2>
+          <p class="lead">These are targets for a business that doesn't exist yet — not results. They're here so the model can be challenged, not admired.</p>
+        </div>
+
+        <div class="table-wrap reveal">
+          <table>
+            <caption>Illustrative assumptions — targets, not results</caption>
+            <thead>
+              <tr><th scope="col">Item</th><th scope="col">Assumption</th><th scope="col">Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Wayline One price</td><td>$1,199</td><td>Car harness included; 30-day money-back trial</td></tr>
+              <tr><td>Hardware gross margin</td><td>~25% target</td><td>Priced to grow the installed base, not to maximize margin</td></tr>
+              <tr><td>Plus price</td><td>$19 / mo · $190 / yr</td><td>LTE, response center, vault, live view, copilot, warranty</td></tr>
+              <tr><td>Plus attach rate</td><td>~40% target</td><td>Share of consumer devices on Plus</td></tr>
+              <tr><td>Plus contribution margin</td><td>~50% target</td><td>After LTE data, cloud, response-center capacity, AI inference and support</td></tr>
+              <tr><td>Fleet price</td><td>$39 / vehicle / mo</td><td>5-vehicle minimum; each vehicle also needs a device</td></tr>
+              <tr><td>Fleet contribution margin</td><td>~70% target</td><td>Software-heavy; shares response-center costs with Plus</td></tr>
+              <tr><td>Customer acquisition</td><td>Community-led</td><td>Open source, word of mouth and creator content before paid ads</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card calc reveal" id="calc">
+          <div class="calc-grid">
+            <div>
+              <h3 style="font-size:1.2rem">Play with the model</h3>
+              <p style="color:var(--text-2);margin:8px 0 28px;font-size:.95rem">One year, one cohort of devices; subscriptions annualized. Uses the assumptions above.</p>
+              <div class="field">
+                <label for="calc-devices"><span>Consumer devices sold</span><output id="calc-devices-out" for="calc-devices">20,000</output></label>
+                <input type="range" id="calc-devices" min="1000" max="100000" step="1000" value="20000">
+              </div>
+              <div class="field">
+                <label for="calc-attach"><span>Plus attach rate</span><output id="calc-attach-out" for="calc-attach">40%</output></label>
+                <input type="range" id="calc-attach" min="5" max="80" step="1" value="40">
+              </div>
+              <div class="field">
+                <label for="calc-fleet"><span>Fleet vehicles</span><output id="calc-fleet-out" for="calc-fleet">2,000</output></label>
+                <input type="range" id="calc-fleet" min="0" max="50000" step="500" value="2000">
+                <small>Fleet vehicles also buy a Wayline One.</small>
+              </div>
+            </div>
+            <dl class="calc-out" aria-live="polite">
+              <div><dt>Hardware revenue</dt><dd id="calc-hw">—</dd></div>
+              <div><dt>Plus (annualized)</dt><dd id="calc-plus">—</dd></div>
+              <div><dt>Fleet (annualized)</dt><dd id="calc-fleet-arr">—</dd></div>
+              <div><dt>Recurring share</dt><dd id="calc-recurring">—</dd></div>
+              <div class="wide"><dt>Blended gross profit</dt><dd id="calc-gp">—</dd></div>
+              <div class="total"><dt>Total revenue (illustrative)</dt><dd id="calc-total">—</dd></div>
+            </dl>
+          </div>
+          <p class="fineprint">Illustrative model — not a forecast, offer or financial advice. It ignores churn, returns, warranty costs, operating expenses and taxes.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ GO TO MARKET ============ -->
+    <section class="section" aria-labelledby="gtm-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Go-to-market</p>
+          <h2 id="gtm-title">Win the builders first, then the families, then the fleets.</h2>
+        </div>
+        <div class="phases">
+          <article class="card phase reveal">
+            <span class="tag lane">Phase A</span>
+            <h3>Developers &amp; enthusiasts</h3>
+            <p>Open-source community, simulator and dev kits. They find bugs, port cars and become the first evangelists.</p>
+          </article>
+          <article class="card phase reveal" data-delay="1">
+            <span class="tag lane">Phase B</span>
+            <h3>Safety-minded drivers</h3>
+            <p>Long commuters, people who often drive alone, and families of new or older drivers — sold on Guardian as much as on lane centering.</p>
+          </article>
+          <article class="card phase reveal" data-delay="2">
+            <span class="tag info">Phase C</span>
+            <h3>Fleets</h3>
+            <p>Delivery, field-service and rideshare operators, where faster incident response and coaching have a clear return.</p>
+          </article>
+          <article class="card phase reveal" data-delay="3">
+            <span class="tag amber">Phase D</span>
+            <h3>Insurers &amp; partners</h3>
+            <p>Opt-in insurance programs and integration partnerships that lower the effective cost of Wayline for drivers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section" id="roadmap" aria-labelledby="roadmap-title" style="padding-top:0">
+      <div class="container" style="max-width:920px">
+        <div class="section-head reveal">
+          <p class="eyebrow">Roadmap</p>
+          <h2 id="roadmap-title">From simulation to the street — carefully.</h2>
+        </div>
+        <ol class="roadmap">
+          <li class="is-now reveal">
+            <span class="node">0</span>
+            <div class="card">
+              <h3>Prototype <span class="tag lane">We are here</span></h3>
+              <p>Open-source reference stack running in simulation.</p>
+              <ul class="ticks">
+                <li>Lane perception, lateral control and safety limits</li>
+                <li>Driver monitoring escalation and Emergency Stop Assist logic</li>
+                <li>Crash detection and Guardian's escalation state machine</li>
+              </ul>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="node">1</span>
+            <div class="card">
+              <h3>Dev kit</h3>
+              <p>Hardware prototypes, closed-course testing, a written safety case and an early developer program.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="node">2</span>
+            <div class="card">
+              <h3>Consumer launch</h3>
+              <p>Wayline One with Core and Plus in a first market, a contracted 24/7 response-center partner, and a public compatibility checker.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="node">3</span>
+            <div class="card">
+              <h3>Fleet &amp; insurance</h3>
+              <p>Fleet dashboard and API, opt-in insurance programs, and new markets as regulations allow.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ============ RISKS ============ -->
+    <section class="section" aria-labelledby="risks-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow amber">Risks &amp; mitigations</p>
+          <h2 id="risks-title">What could go wrong — and what we do about it.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card risk reveal">
+            <h3>Driver-assistance regulation</h3>
+            <p>Rules for aftermarket driver assistance differ between countries and can change.</p>
+            <div class="mitigation"><b>Mitigation</b>Launch market by market with conservative limits, mandatory driver monitoring for engagement, and compliance review before each release.</div>
+          </article>
+          <article class="card risk reveal" data-delay="1">
+            <h3>Safety &amp; liability</h3>
+            <p>A driver-assistance product can be misused or can make mistakes.</p>
+            <div class="mitigation"><b>Mitigation</b>Supervised Level 2 only, independent torque and rate limits, driver override always wins, extensive simulation and closed-course testing, and appropriate insurance.</div>
+          </article>
+          <article class="card risk reveal">
+            <h3>Emergency-call rules</h3>
+            <p>Automated calls to emergency numbers are restricted in many places.</p>
+            <div class="mitigation"><b>Mitigation</b>No automated calls to emergency numbers. Core alerts personal contacts; Plus routes through a trained 24/7 response center that requests emergency services.</div>
+          </article>
+          <article class="card risk reveal" data-delay="1">
+            <h3>Car makers lock down interfaces</h3>
+            <p>New vehicles may restrict the interfaces Wayline relies on.</p>
+            <div class="mitigation"><b>Mitigation</b>Broad multi-brand coverage, community car ports, and partnerships with fleets and suppliers.</div>
+          </article>
+          <article class="card risk reveal">
+            <h3>AI reliability</h3>
+            <p>Language models can be slow, unavailable or wrong.</p>
+            <div class="mitigation"><b>Mitigation</b>AI never gates escalation. A deterministic on-device timer decides; offline templates replace AI briefs when needed; distress words always override a cancel.</div>
+          </article>
+          <article class="card risk reveal" data-delay="1">
+            <h3>Privacy &amp; trust</h3>
+            <p>Cameras in a car are sensitive.</p>
+            <div class="mitigation"><b>Mitigation</b>On-device processing, opt-in uploads and data sharing, deletion controls, and code anyone can audit.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FULL WRITE-UP ============ -->
+    <section class="section" aria-labelledby="doc-title" style="padding-top:0">
+      <div class="container">
+        <div class="card doc-link reveal">
+          <div>
+            <h3 id="doc-title">Read the full business plan</h3>
+            <p>The complete write-up — market, model, pricing rationale, competitive landscape and risks — lives in the repository.</p>
+          </div>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://github.com/NeoFrees/wayline/blob/main/docs/BUSINESS_MODEL.md">Open BUSINESS_MODEL.md</a>
+            <a class="btn btn-ghost" href="index.html">Back to the product</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="./" aria-label="Wayline — home">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="wl-g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3cf2b0"/><stop offset="1" stop-color="#5aa8ff"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="#0b111a"/><rect x=".75" y=".75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/><path d="M14 19 L23.5 46 L32 28 L40.5 46 L50 19" fill="none" stroke="url(#wl-g2)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Wayline</span>
+          </a>
+          <p>The AI copilot that keeps you in your lane — and calls for help when you can't.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#hardware">Wayline One</a></li>
+            <li><a href="index.html#lane-assist">Wayline OS</a></li>
+            <li><a href="index.html#guardian">Guardian</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="business.html">Business model</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="index.html#safety">Safety principles</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Open source</h4>
+          <ul>
+            <li><a href="https://github.com/NeoFrees/wayline">GitHub repository</a></li>
+            <li><a href="https://github.com/NeoFrees/wayline/blob/main/docs/BUSINESS_MODEL.md">Business plan (full)</a></li>
+            <li><a href="https://github.com/NeoFrees/wayline/issues">Report an issue</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer" role="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg>
+        <span>Wayline is a concept-stage prototype. Not for sale. Not certified for use on public roads. Driver-assistance features require an attentive driver at all times. Figures on this page are illustrative assumptions, not forecasts.</span>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Wayline (concept). Software released under the MIT License.</span>
+        <span>Designed for attentive drivers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
