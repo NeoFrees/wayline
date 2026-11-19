@@ -3,7 +3,7 @@
 **The AI copilot that keeps you in your lane, and calls for help when you can't.**
 
 [![CI](https://github.com/NeoFrees/wayline/actions/workflows/ci.yml/badge.svg)](https://github.com/NeoFrees/wayline/actions/workflows/ci.yml)
-[Website](https://neofrees.github.io/wayline/) · [Business model](docs/BUSINESS_MODEL.md) · [Architecture](docs/ARCHITECTURE.md) · [Safety](docs/SAFETY.md)
+[Website](https://neofrees.github.io/wayline/) · [Business model](docs/BUSINESS_MODEL.md) · [Hardware blueprint](hardware/) · [Architecture](docs/ARCHITECTURE.md) · [Safety](docs/SAFETY.md)
 
 > ⚠️ **Concept-stage prototype.** Everything here runs in simulation. It is not certified for
 > road use and must not be connected to a vehicle on public roads. See [SAFETY.md](docs/SAFETY.md).
@@ -96,8 +96,22 @@ wayline/
   sim/          world model, renderers, scenarios, CLI
 tests/          perception, control, monitoring, crash, guardian, AI, end-to-end scenarios
 docs/           BUSINESS_MODEL.md, ARCHITECTURE.md, SAFETY.md
+hardware/       Wayline One blueprint, build guide, manufacturing guide, BOM, drawings
 website/        the marketing site (deployed to GitHub Pages)
 ```
+
+## Hardware
+
+[`hardware/`](hardware/) is the Wayline One package:
+
+- **[Blueprint](hardware/BLUEPRINT.md):** a QCS6490-class SoM, a lockstep Safety Gate MCU, and an always-on
+  Guardian MCU on a backup-power domain. Three road cameras, an IR driver camera, a ±200 g IMU, LTE + eSIM,
+  L1/L5 GNSS, 3× CAN-FD and a fail-safe harness.
+- **[Build guide](hardware/BUILD_GUIDE.md):** bench prototype from dev kits → EVT → DVT → PVT → mass production.
+- **[Manufacturing](hardware/MANUFACTURING.md):** candidate partners by category and region, the RFQ process,
+  one-time costs (≈ $0.55–1.15M) and a ~15-month timeline.
+- **[BOM](hardware/bom/wayline-one-bom.csv):** ≈ $1,066 landed per unit at 1k/yr, ≈ $751 at 10k/yr.
+- **[Drawings](hardware/drawings/).**
 
 ## The business model
 

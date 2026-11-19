@@ -193,7 +193,7 @@ priced below the incumbent's convenience subscription is easy to keep paying for
 
 ## 6. Unit economics (illustrative)
 
-*All numbers below are planning assumptions to be validated in Phase 1–2. They are not results.*
+*All numbers below are planning assumptions to be validated in Phase 1–2. They are not results.* The hardware cost is broken down line by line in [hardware/bom/wayline-one-bom.csv](../hardware/bom/wayline-one-bom.csv).
 
 **Hardware (per unit)**
 
@@ -260,7 +260,7 @@ managers can act on, and that brings in customers who would never have found us 
 | Phase | Goal | Milestones |
 |---|---|---|
 | **0: Reference implementation** (this repo) | Prove the architecture | Closed-loop simulator; lane assist; driver monitoring → Emergency Stop Assist; Guardian with AI language layer and deterministic fallbacks; 100+ tests |
-| **1: Developer kit** | Real-car data, community | 100–300 units built on the open car-interface ecosystem; Guardian running on hardware with the backup cell; false-alarm and time-to-alert measured on real drives; upstream contributions |
+| **1: Developer kit** | Real-car data, community | 100–300 units built on the open car-interface ecosystem; Guardian running on hardware with the backup cell; false-alarm and time-to-alert measured on real drives; upstream contributions. Hardware plan: [hardware/](../hardware/) (blueprint, build guide, manufacturing, BOM) |
 | **2: Consumer launch (US)** | Product–market fit with households | Certified emergency-response partner; one insurer partner; professional install network; Plus at $19 |
 | **3: Fleets and insurance** | B2B revenue | Fleet dashboard, incident API, coaching; insurer discount programs |
 | **4: Scale** | New markets, licensing | EU (eCall-aware), Guardian licensing to OEMs / Tier-1s |

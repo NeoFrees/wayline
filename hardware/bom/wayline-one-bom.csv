@@ -1,0 +1,61 @@
+group,ref,item,candidate_part,manufacturer,alternates,qty,unit_cost_1k_usd,unit_cost_10k_usd,ext_cost_1k_usd,ext_cost_10k_usd,notes
+Compute,U1,System-on-module (8 GB LPDDR5 / 128 GB UFS / Wi-Fi 6E),TurboX C6490 (QCS6490-class),Thundercomm,NVIDIA Jetson Orin Nano 8GB; NXP i.MX 8M Plus SoM,1,255.00,195.00,255.00,195.00,Confirm >=4 concurrent MIPI cameras + NPU throughput; industrial temp grade
+Compute,U2,Safety Gate MCU (lockstep; CAN-FD),S32K344,NXP,Infineon AURIX TC3xx; ST SPC58,1,12.00,9.00,12.00,9.00,Runs actuation limits (port of wayline/control/safety.py)
+Compute,U3,Guardian MCU (ultra-low-power),STM32U585,STMicroelectronics,Nordic nRF5340; NXP LPC55S69,1,8.00,6.00,8.00,6.00,Zephyr; crash detection + escalation timers
+Compute,U4,Secure element,ATECC608B,Microchip,NXP SE050,1,1.50,1.00,1.50,1.00,Device identity + OTA keys
+Compute,U5,SPI FRAM 256 kbit (black box),CY15B256J,Infineon,Fujitsu MB85RS256,1,4.50,3.50,4.50,3.50,2 s pre/post crash buffer
+Compute,U6-U8,CAN-FD transceiver (CAN SIC),TJA1462,NXP,TI TCAN1462-Q1,3,2.00,1.50,6.00,4.50,One per bus (CAN-A/B/C)
+Compute,-,MCU crystals / supervisors / passives,various,various,-,1,18.00,13.00,18.00,13.00,Budget line
+Cameras,CAM1-3,Road camera module (sensor + M12 lens + rigid-flex; active aligned),AR0233AT based module,onsemi sensor; module by camera supplier,AR0820AT (narrow); Sony IMX390 based,3,52.00,35.00,156.00,105.00,Wide ~120 / main ~60 / narrow ~30 deg HFOV
+Cameras,CAM4,Driver-monitoring camera module (global shutter; 940 nm band-pass),AR0144AT based module,onsemi sensor; module by camera supplier,OmniVision OX05B1S (RGB-IR),1,38.00,26.00,38.00,26.00,
+Cameras,D1-D2,IR LED 940 nm high power,OSLON Black 940 nm class,ams OSRAM,Lumileds 940 nm IR,2,2.50,1.50,5.00,3.00,IEC 62471 exempt group at 30 cm
+Cameras,U9,IR LED constant-current strobe driver,TPS61169 class + FET,Texas Instruments,discrete current sink,1,6.00,6.00,6.00,6.00,Synced to DMS exposure
+Connectivity,U10,LTE Cat 4 module (voice + SMS),EG25-G,Quectel,Telit LE910C4; Sierra Wireless EM7411,1,48.00,38.00,48.00,38.00,Carrier pre-certified; on Guardian (VRES) domain
+Connectivity,U11,eUICC eSIM (MFF2),MFF2 eUICC,Thales / G+D / Kigen,-,1,4.00,3.00,4.00,3.00,Soldered; multi-profile
+Connectivity,ANT1-2,LTE flex antenna (main + diversity),flex PCB LTE antenna,Taoglas / Molex,-,2,6.00,4.50,12.00,9.00,Qualify on IR-coated windshields
+Connectivity,ANT3,GNSS L1/L5 patch antenna,dual-band patch,Taoglas,-,1,9.00,7.00,9.00,7.00,
+Connectivity,U12,GNSS receiver L1/L5,NEO-F10N,u-blox,Quectel LC29H,1,26.00,19.00,26.00,19.00,Dead reckoning fused on SoM
+Connectivity,-,RF connectors / matching / shielding cans,various,various,-,1,6.00,4.00,6.00,4.00,U.FL test ports
+Sensors & audio,U13,High-g accelerometer +/-200 g,ADXL372,Analog Devices,ST H3LIS331DL,1,9.00,7.00,9.00,7.00,Crash pulse capture with FIFO
+Sensors & audio,U14,6-axis IMU (AEC-Q100),ASM330LHHX,STMicroelectronics,Bosch BMI088; TDK IAM-20685,1,6.00,4.50,6.00,4.50,Rollover / gravity vector / alignment
+Sensors & audio,MK1-MK4,PDM MEMS microphone,IM69D130,Infineon,TDK ICS-41352; Knowles SPH0641,4,1.50,1.00,6.00,4.00,2 cabin face + 2 top edge
+Sensors & audio,U15,Smart speaker amplifier,TAS2563,Texas Instruments,Analog Devices MAX98357A,1,3.50,2.50,3.50,2.50,On Guardian (VRES) domain
+Sensors & audio,LS1,Speaker 28 mm 2 W,28 mm full-range,PUI Audio / Same Sky,-,1,4.00,3.00,4.00,3.00,
+Sensors & audio,U16,Audio path switch (SoM <-> Guardian MCU),TS5A23157 class,Texas Instruments,-,1,1.50,1.00,1.50,1.00,
+Power & Reserve,C1-C2,Lithium-ion capacitor cell 3.8 V >=250 F (-25..+85 C),LIC / hybrid supercapacitor,Musashi Energy Solutions (ULTIMO) / Eaton (HS-HSL),LTO cell (alt architecture),2,12.00,8.00,24.00,16.00,Guardian Reserve ~2.4 kJ usable for the pair
+Power & Reserve,U17,Supercapacitor backup controller,LTC3350,Analog Devices,LTC4041,1,9.00,7.00,9.00,7.00,Charge + backup boost + capacitance/ESR health
+Power & Reserve,U18,Ideal-diode controller + MOSFET (reverse polarity),LM74700-Q1,Texas Instruments,ADI LTC4359,1,4.00,3.00,4.00,3.00,
+Power & Reserve,D3,TVS for load dump (ISO 16750-2),SM8S33A class,Vishay / Littelfuse,-,1,2.00,1.50,2.00,1.50,
+Power & Reserve,U19,5 V / 4 A synchronous buck (automotive),LM61460-Q1,Texas Instruments,ADI LT8636,1,5.50,4.00,5.50,4.00,Feeds SoM PMIC
+Power & Reserve,U20,3.3 V / 1 A buck,LMR33610-Q1 class,Texas Instruments,-,1,2.50,2.00,2.50,2.00,Safety Gate + CAN
+Power & Reserve,-,EMI pi-filter / bulk capacitors,various,various,-,1,8.00,5.50,8.00,5.50,CISPR 25
+Power & Reserve,-,Power passives / fuses / test points,various,various,-,1,10.00,6.00,10.00,6.00,Budget line
+PCBs & assembly,PCB1,Main board fab (10-layer HDI; high-Tg; ENIG),fab,PCB fabricator,-,1,32.00,18.00,32.00,18.00,IPC-6012 Class 3 (DA)
+PCBs & assembly,-,Main board SMT assembly,assembly,EMS,-,1,22.00,12.00,22.00,12.00,IPC-A-610 Class 3
+PCBs & assembly,PCB2,Cabin board fab + assembly (4-layer),fab + assembly,PCB fabricator / EMS,-,1,9.00,6.00,9.00,6.00,
+PCBs & assembly,FPC1-3,Flex interconnects (cabin / cameras),FPC,flex supplier,-,1,7.00,4.00,7.00,4.00,Set of 3
+Mechanical,M1,Front shell (PC/ABS heat-resistant; UV-stable; UL94 V-0),injection molded,molder,-,1,9.00,4.50,9.00,4.50,Bayblend T85 / Cycoloy class
+Mechanical,M2,Rear frame / heatsink (die-cast ADC12; powder coat),die cast,die caster,-,1,18.00,10.00,18.00,10.00,Structural + thermal spine
+Mechanical,M3,Glare hood with baffles (PC/ABS; textured),injection molded,molder,-,1,6.00,3.00,6.00,3.00,VDI 3400 Ref 33+
+Mechanical,M4,Camera bracket (6061-T6 CNC; die-cast at volume),machined,machine shop,-,1,14.00,6.00,14.00,6.00,Co-planar road cameras
+Mechanical,M5,Windshield mount plate + VHB 5952 + quick release,stamped + adhesive,stamper / 3M,3M 4229P,1,7.00,4.00,7.00,4.00,
+Mechanical,M6,Blower fan 30x30x7 mm 5 V PWM,blower,Sunon / Delta,-,1,8.00,6.00,8.00,6.00,Re-evaluate after thermal EVT
+Mechanical,M7,Thermal gap pads / graphite spreader,thermal interface,Bergquist (Henkel) / Laird,-,1,5.00,3.00,5.00,3.00,>=6 W/m-K
+Mechanical,M8,Gaskets / acoustic mesh / dust filter / foam,die-cut,converter,-,1,4.00,2.50,4.00,2.50,
+Mechanical,M9,Fasteners (M2 Torx thread-forming + machine),screws,fastener supplier,-,1,2.00,1.00,2.00,1.00,
+Mechanical,M10,Light pipe + SOS button cap,molded,molder,-,1,3.00,1.50,3.00,1.50,
+Mechanical,-,Labels / regulatory marking / misc,various,various,-,1,9.00,4.50,9.00,4.50,Budget line
+UI,DS1,1.5 in 128x128 color OLED,SSD1351-based OLED,display supplier,-,1,10.00,7.00,10.00,7.00,Burn-in mitigation (dim + pixel shift)
+UI,SW1,SOS tactile switch 12 mm illuminated IP67,illuminated tactile,C&K / E-Switch,-,1,3.50,2.50,3.50,2.50,Raised guard ring in housing
+UI,D4-D6,RGB status LEDs,RGB LED,Kingbright / Würth,-,1,2.50,1.50,2.50,1.50,
+Harness,H1,Vehicle Y-harness with OEM-compatible connectors,per car family,harness assembler,-,1,28.00,21.00,28.00,21.00,One SKU per connector family
+Harness,H2,Harness box (2-layer PCB; NC DPDT relays; ESD; PTC fuse; housing),assembly,EMS / harness assembler,-,1,17.00,12.00,17.00,12.00,Fail-safe stock pass-through
+Harness,H3,1.5 m device cable (3x CAN-FD pairs + power) with 12-pin locking connector,cable assembly,harness assembler,Molex Mini50 / TE NanoMQS,1,15.00,12.00,15.00,12.00,Not USB-C by design
+Factory,-,Final assembly (box build),labor,EMS,-,1,15.00,8.00,15.00,8.00,
+Factory,-,Camera calibration (intrinsics/extrinsics/DMS),station time,EMS,-,1,10.00,6.00,10.00,6.00,
+Factory,-,Functional test (CAN / RF / audio / sensors / Reserve),station time,EMS,-,1,12.00,7.00,12.00,7.00,
+Factory,-,Burn-in / thermal soak,station time,EMS,-,1,8.00,4.00,8.00,4.00,
+Logistics,-,Retail packaging + quick-start guide,packaging,packaging supplier,-,1,8.00,5.00,8.00,5.00,
+Logistics,-,Freight / logistics to distribution center,freight,forwarder,-,1,22.00,16.00,22.00,16.00,
+Logistics,-,Duties / tariff allowance,duties,customs broker,-,1,25.00,22.00,25.00,22.00,Highly origin-dependent; re-check before sourcing decisions
+Logistics,-,Yield loss / scrap allowance,allowance,-,-,1,25.00,22.00,25.00,22.00,
